@@ -8,11 +8,11 @@
 #   Explanation of what this parameter affects and what it defaults to.
 #
 class <%= metadata.name %> (
-) inherits <%= metadata.name %>::params {
+) {
 
   # validate parameters here
 
-  class { '<%= metadata.name %>::install': } ->
+  class { '<%= metadata.name %>::package': } ->
   class { '<%= metadata.name %>::config': } ~>
   class { '<%= metadata.name %>::service': } ->
   Class['<%= metadata.name %>']

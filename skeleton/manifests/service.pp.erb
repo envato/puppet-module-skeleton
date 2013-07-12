@@ -9,6 +9,5 @@ class <%= metadata.name %>::service {
     enable     => true,
     hasstatus  => true,
     hasrestart => true,
-    provider   => $<%= metadata.name %>::params::service_provider,
   }
 }
